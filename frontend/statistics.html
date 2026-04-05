@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics | Discipline Ledger</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <header class="topbar">
+        <div class="brand">
+            <h1>Statistics</h1>
+            <p>Performance analytics from your journal data | <span class="owner-name">Sandesh Kalagi</span></p>
+        </div>
+        <nav class="nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="journal.html">Journal Entry</a>
+            <a href="history.html">History</a>
+            <a href="statistics.html" aria-current="page">Statistics</a>
+            <a href="rules.html">Rules</a>
+            <a href="settings.html">Settings</a>
+        </nav>
+    </header>
+
+    <section class="hero hero--statistics panel">
+        <div>
+            <h2>Performance Summary</h2>
+            <p>Track consistency metrics and capital trend behavior.</p>
+            <p class="status" id="stats-message">Loading statistics...</p>
+        </div>
+    </section>
+
+    <h2 class="section-title">Key Metrics</h2>
+    <section class="grid">
+        <article class="card card--neutral panel">
+            <h3>Win Rate</h3>
+            <p class="metric" id="stat-win-rate">0.00%</p>
+        </article>
+        <article class="card card--profit panel">
+            <h3>Average Profit</h3>
+            <p class="metric profit" id="stat-avg-profit">0.00</p>
+        </article>
+        <article class="card card--loss panel">
+            <h3>Average Loss</h3>
+            <p class="metric loss" id="stat-avg-loss">0.00</p>
+        </article>
+        <article class="card card--neutral panel">
+            <h3>Total Trades</h3>
+            <p class="metric" id="stat-total-trades">0</p>
+        </article>
+        <article class="card card--profit panel">
+            <h3>Best Day</h3>
+            <p class="metric profit" id="stat-best-day">0.00</p>
+        </article>
+        <article class="card card--loss panel">
+            <h3>Worst Day</h3>
+            <p class="metric loss" id="stat-worst-day">0.00</p>
+        </article>
+    </section>
+
+    <h2 class="section-title">Capital Growth History</h2>
+    <section class="panel table-wrap">
+        <table>
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Ending Capital</th>
+            </tr>
+            </thead>
+            <tbody id="growth-history-body">
+            <tr>
+                <td colspan="2">Loading...</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/statistics.js"></script>
+</body>
+</html>

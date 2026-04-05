@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Discipline Ledger</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container auth-page">
+    <section class="panel auth-card">
+        <h1>Create Account</h1>
+        <p class="muted">Start your private trading journal workspace.</p>
+        <form id="register-form" class="form-grid auth-form">
+            <div class="full-width">
+                <label for="register-name">Name</label>
+                <input id="register-name" type="text" required>
+            </div>
+            <div class="full-width">
+                <label for="register-email">Email</label>
+                <input id="register-email" type="email" required>
+            </div>
+            <div class="full-width">
+                <label for="register-password">Password</label>
+                <input id="register-password" type="password" minlength="6" required>
+            </div>
+            <div class="full-width">
+                <button class="btn" type="submit">Register</button>
+            </div>
+        </form>
+        <p id="register-message" class="msg"></p>
+        <p class="muted">Already have an account? <a href="login.html">Login</a></p>
+    </section>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/register.js"></script>
+</body>
+</html>

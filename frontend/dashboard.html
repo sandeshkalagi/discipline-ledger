@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Discipline Ledger</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <header class="topbar">
+        <div class="brand">
+            <h1>Discipline Ledger</h1>
+            <p>Trading Journal and Capital Tracker | <span class="owner-name">Sandesh Kalagi</span></p>
+        </div>
+        <nav class="nav">
+            <a href="dashboard.html" aria-current="page">Dashboard</a>
+            <a href="journal.html">Journal Entry</a>
+            <a href="history.html">History</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="rules.html">Rules</a>
+            <a href="settings.html">Settings</a>
+        </nav>
+    </header>
+
+    <section class="hero hero--dashboard panel">
+        <div>
+            <h2>Daily Trading Overview</h2>
+            <p>Monitor capital, returns, and risk-control warnings in one place.</p>
+            <p class="status" id="dashboard-message">Loading dashboard...</p>
+        </div>
+        <div class="hero-meta">
+            <div class="hero-label">Trading Date</div>
+            <div class="hero-value" id="dashboard-date">-</div>
+        </div>
+    </section>
+
+    <h2 class="section-title">Performance Metrics</h2>
+    <section class="grid">
+        <article class="card card--capital panel">
+            <h3>Current Capital</h3>
+            <p class="metric" id="current-capital">0.00</p>
+            <p class="muted">Latest recorded ending capital.</p>
+        </article>
+        <article class="card card--today panel">
+            <h3>Today's P/L</h3>
+            <p class="metric" id="today-pnl">0.00</p>
+            <p class="muted">Daily change from starting to ending capital.</p>
+        </article>
+        <article class="card card--total panel">
+            <h3>Total P/L</h3>
+            <p class="metric" id="total-pnl">0.00</p>
+            <p class="muted">Net gain/loss from initial baseline.</p>
+        </article>
+        <article class="card card--return panel">
+            <h3>Total Return %</h3>
+            <p class="metric" id="return-pct">0.00%</p>
+            <p class="muted">Overall percentage return.</p>
+        </article>
+        <article class="card card--target panel">
+            <h3>Target Capital</h3>
+            <p class="metric" id="target-capital">0.00</p>
+            <p class="muted">Remaining: <strong id="remaining-target">0.00</strong></p>
+        </article>
+        <article class="card card--motivation panel">
+            <h3>Motivation</h3>
+            <p id="motivation-message">Protect capital first. Follow your process.</p>
+        </article>
+    </section>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

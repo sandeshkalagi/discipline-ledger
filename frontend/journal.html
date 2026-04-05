@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal Entry | Discipline Ledger</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <header class="topbar">
+        <div class="brand">
+            <h1>Journal Entry</h1>
+            <p>Record your daily performance and trading behavior | <span class="owner-name">Sandesh Kalagi</span></p>
+        </div>
+        <nav class="nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="journal.html" aria-current="page">Journal Entry</a>
+            <a href="history.html">History</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="rules.html">Rules</a>
+            <a href="settings.html">Settings</a>
+        </nav>
+    </header>
+
+    <section class="hero hero--journal panel">
+        <div>
+            <h2>New Daily Entry</h2>
+            <p>Capture numbers and reflections while details are fresh.</p>
+        </div>
+    </section>
+
+    <h2 class="section-title">Entry Form</h2>
+    <section class="panel form-wrap">
+        <form id="journal-form" class="form-grid">
+            <div>
+                <label for="entryDate">Date</label>
+                <input id="entryDate" type="date" required>
+            </div>
+            <div>
+                <label for="numberOfTrades">Number of Trades</label>
+                <input id="numberOfTrades" type="number" min="0" required>
+            </div>
+            <div>
+                <label for="startingCapital">Starting Capital</label>
+                <input id="startingCapital" type="number" step="0.01" min="0.01" required>
+            </div>
+            <div>
+                <label for="endingCapital">Ending Capital</label>
+                <input id="endingCapital" type="number" step="0.01" min="0.01" required>
+            </div>
+            <div class="full-width">
+                <label for="mistakesMade">Mistakes Made</label>
+                <textarea id="mistakesMade" placeholder="Rule violations, overtrading, emotional actions"></textarea>
+            </div>
+            <div class="full-width">
+                <label for="whatWentWell">What Went Well</label>
+                <textarea id="whatWentWell" placeholder="Good decisions and discipline wins"></textarea>
+            </div>
+            <div class="full-width">
+                <label for="notes">Notes</label>
+                <textarea id="notes" placeholder="Market context and key observations"></textarea>
+            </div>
+            <div class="full-width">
+                <label for="moodDisciplineNotes">Mood / Discipline Notes</label>
+                <textarea id="moodDisciplineNotes" placeholder="State of mind, focus, patience, confidence"></textarea>
+            </div>
+            <div class="full-width">
+                <button type="submit" class="btn">Save Entry</button>
+            </div>
+        </form>
+        <p id="form-message" class="msg"></p>
+    </section>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/journal.js"></script>
+</body>
+</html>

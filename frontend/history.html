@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History | Discipline Ledger</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <header class="topbar">
+        <div class="brand">
+            <h1>History</h1>
+            <p>Review all previous journal entries | <span class="owner-name">Sandesh Kalagi</span></p>
+        </div>
+        <nav class="nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="journal.html">Journal Entry</a>
+            <a href="history.html" aria-current="page">History</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="rules.html">Rules</a>
+            <a href="settings.html">Settings</a>
+        </nav>
+    </header>
+
+    <section class="hero hero--history panel">
+        <div>
+            <h2>Journal Entry Timeline</h2>
+            <p>Use this view for weekly and monthly performance review.</p>
+        </div>
+        <div class="hero-meta">
+            <div class="hero-label">Total Entries</div>
+            <div class="hero-value" id="history-count">0</div>
+        </div>
+    </section>
+
+    <section class="grid">
+        <article class="card card--neutral panel">
+            <h3>Net P/L (All Entries)</h3>
+            <p class="metric" id="history-net-pnl">0.00</p>
+        </article>
+        <article class="card card--profit panel">
+            <h3>Winning Days</h3>
+            <p class="metric" id="history-win-days">0</p>
+        </article>
+        <article class="card card--loss panel">
+            <h3>Losing Days</h3>
+            <p class="metric" id="history-loss-days">0</p>
+        </article>
+    </section>
+
+    <h2 class="section-title">Entry Table</h2>
+    <section class="panel table-wrap">
+        <p id="history-message" class="msg"></p>
+        <table>
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Starting Capital</th>
+                <th>Ending Capital</th>
+                <th>Today's P/L</th>
+                <th>Trades</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody id="history-body">
+            <tr>
+                <td colspan="6">Loading...</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <h2 class="section-title">Edit Entry</h2>
+    <section class="panel form-wrap" id="history-edit-panel" style="display: none;">
+        <form id="history-edit-form" class="form-grid">
+            <input id="edit-id" type="hidden">
+            <div>
+                <label for="edit-entry-date">Date</label>
+                <input id="edit-entry-date" type="date" required>
+            </div>
+            <div>
+                <label for="edit-number-of-trades">Number of Trades</label>
+                <input id="edit-number-of-trades" type="number" min="0" required>
+            </div>
+            <div>
+                <label for="edit-starting-capital">Starting Capital</label>
+                <input id="edit-starting-capital" type="number" step="0.01" min="0.01" required>
+            </div>
+            <div>
+                <label for="edit-ending-capital">Ending Capital</label>
+                <input id="edit-ending-capital" type="number" step="0.01" min="0.01" required>
+            </div>
+            <div class="full-width">
+                <label for="edit-mistakes-made">Mistakes Made</label>
+                <textarea id="edit-mistakes-made"></textarea>
+            </div>
+            <div class="full-width">
+                <label for="edit-what-went-well">What Went Well</label>
+                <textarea id="edit-what-went-well"></textarea>
+            </div>
+            <div class="full-width">
+                <label for="edit-notes">Notes</label>
+                <textarea id="edit-notes"></textarea>
+            </div>
+            <div class="full-width">
+                <label for="edit-mood-discipline-notes">Mood / Discipline Notes</label>
+                <textarea id="edit-mood-discipline-notes"></textarea>
+            </div>
+            <div class="full-width action-row">
+                <button class="btn" type="submit">Update Entry</button>
+                <button class="btn btn-secondary" id="history-cancel-edit" type="button">Cancel</button>
+            </div>
+        </form>
+    </section>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/history.js"></script>
+</body>
+</html>

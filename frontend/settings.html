@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | Discipline Ledger</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <header class="topbar">
+        <div class="brand">
+            <h1>Settings</h1>
+            <p>Control risk limits, target return, and motivation | <span class="owner-name">Sandesh Kalagi</span></p>
+        </div>
+        <nav class="nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="journal.html">Journal Entry</a>
+            <a href="history.html">History</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="rules.html">Rules</a>
+            <a href="settings.html" aria-current="page">Settings</a>
+        </nav>
+    </header>
+
+    <section class="hero hero--rules panel">
+        <div>
+            <h2>Risk & Target Controls</h2>
+            <p>These values directly drive your dashboard warnings and target calculations.</p>
+        </div>
+    </section>
+
+    <h2 class="section-title">Trading Configuration</h2>
+    <section class="panel form-wrap">
+        <form id="settings-form" class="form-grid">
+            <div>
+                <label for="initialCapital">Initial Capital</label>
+                <input id="initialCapital" type="number" step="0.01" min="0.01" required>
+            </div>
+            <div>
+                <label for="targetReturnPercentage">Target Return %</label>
+                <input id="targetReturnPercentage" type="number" step="0.01" min="0.01" required>
+            </div>
+            <div>
+                <label for="maxTradesPerDay">Max Trades Per Day</label>
+                <input id="maxTradesPerDay" type="number" min="1" required>
+            </div>
+            <div>
+                <label for="maxDailyLossPercentage">Max Daily Loss %</label>
+                <input id="maxDailyLossPercentage" type="number" step="0.01" min="0.01" required>
+            </div>
+            <div class="full-width">
+                <label for="motivationMessage">Motivation Message</label>
+                <textarea id="motivationMessage" placeholder="Protect capital first. Trade only A+ setups."></textarea>
+            </div>
+            <div class="full-width">
+                <button type="submit" class="btn">Save Settings</button>
+            </div>
+        </form>
+        <p id="settings-save-message" class="msg"></p>
+    </section>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/settings.js"></script>
+</body>
+</html>

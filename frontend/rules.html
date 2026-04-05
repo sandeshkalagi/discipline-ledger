@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules | Discipline Ledger</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <header class="topbar">
+        <div class="brand">
+            <h1>Rules</h1>
+            <p>Define your trading and discipline playbook | <span class="owner-name">Sandesh Kalagi</span></p>
+        </div>
+        <nav class="nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="journal.html">Journal Entry</a>
+            <a href="history.html">History</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="rules.html" aria-current="page">Rules</a>
+            <a href="settings.html">Settings</a>
+        </nav>
+    </header>
+
+    <section class="hero hero--rules panel">
+        <div>
+            <h2>Trading Rules and Motivation Notes</h2>
+            <p>Keep your operating rules visible and updated.</p>
+        </div>
+    </section>
+
+    <h2 class="section-title">Rules Editor</h2>
+    <section class="panel form-wrap">
+        <form id="rules-form" class="form-grid">
+            <div class="full-width">
+                <label for="tradingRules">Trading Rules</label>
+                <textarea id="tradingRules" placeholder="Entry criteria, risk limits, setup filters"></textarea>
+            </div>
+            <div class="full-width">
+                <label for="disciplineRules">Discipline Rules</label>
+                <textarea id="disciplineRules" placeholder="Behavioral constraints and process checkpoints"></textarea>
+            </div>
+            <div class="full-width">
+                <label for="motivationNotes">Motivation Notes</label>
+                <textarea id="motivationNotes" placeholder="Mindset reminders and confidence anchors"></textarea>
+            </div>
+            <div class="full-width">
+                <label for="dailyReminders">Daily Reminders</label>
+                <textarea id="dailyReminders" placeholder="Checklist to review before trading"></textarea>
+            </div>
+            <div class="full-width">
+                <button type="submit" class="btn">Save Rules</button>
+            </div>
+        </form>
+        <p id="rules-save-message" class="msg"></p>
+    </section>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/rules.js"></script>
+</body>
+</html>
